@@ -4,17 +4,17 @@ import './text_section.dart';
 import '../../models/Location.dart';
 
 class LocationDetails extends StatelessWidget {
-  final int locationId;
-  LocationDetails(this.locationId);
+  final int _locationId;
+  LocationDetails(this._locationId);
 
   @override
   Widget build(BuildContext context) {
-    final location = Location.fetchById(locationId)!;
-    
+    final location = Location.fetchById(_locationId)!;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(location.name),
-        leading: Icon(Icons.location_city_sharp, color: Colors.white),
+        actions: [Icon(Icons.location_city, color: Colors.white)],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,

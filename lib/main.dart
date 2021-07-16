@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:location_app/locations.dart';
 import 'package:location_app/style.dart';
+import 'locations/locations.dart';
+import 'screens/location_details/location_details.dart';
 
 void main() => runApp(MyApp());
 
+const LocationsRoute = '/';
+const LocationDetailsRoute = '/location_detail';
+
 class MyApp extends StatelessWidget {
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

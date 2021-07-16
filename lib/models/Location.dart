@@ -8,15 +8,6 @@ class Location {
 
   Location(this.id, this.name, this.imagePath, this.facts);
 
-  static Location? fetchById(int locationID) {
-    List<Location> locations = Location.fetchAll();
-    for (var i = 0; i < locations.length; i++) {
-      if (locations[i].id == locationID) {
-        return locations[i];
-      }
-    }
-    return null;
-  }
 
   static List<Location> fetchAll() {
     return [
@@ -39,5 +30,16 @@ class Location {
             'Being a best place sometimes turns to be another under rating of its entirety and more'),
       ]),
     ];
+  }
+
+  
+  static Location? fetchById(int locationID) {
+    List<Location> locations = Location.fetchAll();
+    for (var i = 0; i < locations.length; i++) {
+      if (locations[i].id == locationID) {
+        return locations[i];
+      }
+    }
+    return null;
   }
 }
