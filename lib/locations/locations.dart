@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:location_app/main.dart';
+import 'package:location_app/screens/location_details/imageView.dart';
 import 'package:location_app/screens/location_details/location_details.dart';
 import '../models/Location.dart';
 
@@ -21,10 +21,7 @@ class Locations extends StatelessWidget {
               margin: EdgeInsets.all(5),
               padding: EdgeInsets.all(5),
               child: GestureDetector(
-                child: Text(
-                  location.name,
-                  style: TextStyle(fontSize: 20),
-                ),
+                child: ImageView(location.imagePath, location.name),
                 onTap: () => _onLocationTap(location.id),
               ));
         }).toList()
